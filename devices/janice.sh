@@ -1,5 +1,25 @@
 #!/bin/bash
 
+repo="device/samsung/janice"
+echo -e "${bldblu}  Patching $repo .."
+cd $top_path/$repo
+$normal
+git fetch https://github.com/t4n017/android_device_samsung_janice.git aospa
+git cherry-pick 301caac3eefe44da10e4c8f08e5f7d249e26b352
+
+echo ""
+echo ""
+
+repo="device/samsung/u8500-common"
+echo -e "${bldblu}  Patching $repo .."
+cd $top_path/$repo
+$normal
+git fetch https://github.com/t4n017/android_device_samsung_u8500-common.git aospa
+git cherry-pick 345e74c0a729dfac55ee8c517c40c9c61e48851f
+
+echo ""
+echo ""
+
 repo="frameworks/av"
 echo -e "${bldblu}  Patching $repo .."
 cd $top_path/$repo
@@ -40,6 +60,16 @@ git cherry-pick 5e4fd2c1d90141347a4e82f19d83052b3ee665ac
 echo ""
 echo ""
 
+repo="packages/apps/Settings"
+echo -e "${bldblu}  Patching $repo .."
+cd $top_path/$repo
+$normal
+git fetch https://github.com/t4n017/android_packages_apps_Settings.git aospa
+git cherry-pick a608274645be777fcfb8634238b86ce7536497b6
+
+echo ""
+echo ""
+
 repo="packages/services/Telephony"
 echo -e "${bldblu}  Patching $repo .."
 cd $top_path/$repo
@@ -67,3 +97,13 @@ cd $top_path/$repo
 $normal
 git fetch https://github.com/t4n017/android_system_vold.git aospa
 git cherry-pick 341e219e1209ecdafeab1b64db6a2ed465579ded
+
+echo ""
+echo ""
+
+repo="vendor/pa"
+echo -e "${bldblu}  Patching $repo .."
+cd $top_path/$repo
+$normal
+git fetch https://github.com/t4n017/android_vendor_pa.git kitkat
+git cherry-pick b961146ca6ede9cdb25e7b90e43f2df8d0023262
