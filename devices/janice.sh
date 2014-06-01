@@ -61,6 +61,16 @@ git cherry-pick 5e4fd2c1d90141347a4e82f19d83052b3ee665ac
 echo ""
 echo ""
 
+repo="packages/apps/DeskClock"
+echo -e "${bldblu}  Patching $repo .."
+cd $top_path/$repo
+$normal
+git fetch https://github.com/t4n017/android_packages_apps_DeskClock.git kitkat
+git cherry-pick f92e1c592b4580cb206f2c60312dcb94c0f2810b
+
+echo ""
+echo ""
+
 repo="packages/apps/Settings"
 echo -e "${bldblu}  Patching $repo .."
 cd $top_path/$repo
