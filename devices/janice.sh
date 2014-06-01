@@ -6,6 +6,7 @@ cd $top_path/$repo
 $normal
 git fetch https://github.com/t4n017/android_build.git kitkat
 git cherry-pick fc80cc4b406cbb1b4995a2f06f4441b71c9db256
+git cherry-pick 3be43ea465a318fe08814445622a17f5fa481880
 
 echo ""
 echo ""
