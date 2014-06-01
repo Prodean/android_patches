@@ -72,6 +72,16 @@ git cherry-pick 5e4fd2c1d90141347a4e82f19d83052b3ee665ac
 echo ""
 echo ""
 
+repo="kernel/samsung/u8500"
+echo -e "${bldblu}  Patching $repo .."
+cd $top_path/$repo
+$normal
+git fetch https://github.com/t4n017/android_kernel_samsung_u8500.git 3.0.101
+git cherry-pick 959c51609318526231ebeb34b70460fce51ea4d5
+
+echo ""
+echo ""
+
 repo="packages/apps/DeskClock"
 echo -e "${bldblu}  Patching $repo .."
 cd $top_path/$repo
