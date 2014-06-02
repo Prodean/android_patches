@@ -1,5 +1,15 @@
 #!/bin/bash
 
+repo="build"
+echo -e "${bldblu}  Patching $repo .."
+cd $top_path/$repo
+$normal
+git fetch https://github.com/t4n017/android_build.git kitkat
+git cherry-pick fc80cc4b406cbb1b4995a2f06f4441b71c9db256
+
+echo ""
+echo ""
+
 repo="device/samsung/janice"
 echo -e "${bldblu}  Patching $repo .."
 cd $top_path/$repo
