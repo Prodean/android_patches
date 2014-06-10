@@ -6,6 +6,7 @@ cd $top_path/$repo
 $normal
 git fetch https://github.com/t4n017/android_device_samsung_janice.git aospa
 git cherry-pick 301caac3eefe44da10e4c8f08e5f7d249e26b352
+git cherry-pick bb6b9d0749466af2f0f671d1bde1629fe9275886
 
 echo ""
 echo ""
@@ -107,3 +108,4 @@ cd $top_path/$repo
 $normal
 git fetch https://github.com/t4n017/android_vendor_pa.git kitkat
 git cherry-pick b961146ca6ede9cdb25e7b90e43f2df8d0023262
+git cherry-pick e6414550ad37ff891f49f78bc828387eb788bc99
